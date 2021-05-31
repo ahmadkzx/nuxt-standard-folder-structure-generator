@@ -12,9 +12,25 @@ const program = () => {
 			prompt([
 				{
 					type: 'list',
-					name: 'selected',
+					name: 'css',
 					message: 'Select your css preprocessor',
 					choices: ['Sass', 'Less', 'Stylus']
+				},
+				{
+					type: 'list',
+					name: 'api',
+					message: 'Select your api type',
+					choices: ['Graphql', 'Rest']
+				},
+				{
+					type: 'confirm',
+					name: 'header',
+					message: 'do you have Header?'
+				},
+				{
+					type: 'confirm',
+					name: 'footer',
+					message: 'do you have Footer?'
 				}
 			])
 				.then( ({ selected }) => {
