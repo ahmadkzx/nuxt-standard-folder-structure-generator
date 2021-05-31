@@ -1,8 +1,7 @@
 const fs = require('fs')
 
 const generator = (cssPreprocessor) => {
-	const path = require('path');
-console.log(path.dirname(require.main.filename));
+	console.log(process.cwd())
 	// fs.mkdir('./')
 }
 

@@ -1,2 +1,3 @@
 const program = require('./program')
-program()
+
+module.exports = program
