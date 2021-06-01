@@ -12,29 +12,29 @@ const program = () => {
 			prompt([
 				{
 					type: 'list',
-					name: 'css',
+					name: 'cssPreprocessor',
 					message: 'Select your css preprocessor',
 					choices: ['Sass', 'Less', 'Stylus']
 				},
 				{
 					type: 'list',
-					name: 'api',
+					name: 'apiType',
 					message: 'Select your api type',
 					choices: ['Graphql', 'Rest']
 				},
 				{
 					type: 'confirm',
-					name: 'header',
+					name: 'isHasHeader',
 					message: 'do you have Header?'
 				},
 				{
 					type: 'confirm',
-					name: 'footer',
+					name: 'isHasFooter',
 					message: 'do you have Footer?'
 				}
 			])
-				.then( ({ selected }) => {
-					generator(selected)
+				.then(args => {
+					generator(args)
 				})
 		})
 
